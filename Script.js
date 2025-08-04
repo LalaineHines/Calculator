@@ -98,3 +98,33 @@ function setDisplay (displayNum) {
     display.textContent = displayNum;
 };
 
+// Function to register out button events from HTML to javascript
+buttons.forEach(button => {
+    button.addEventListener('click', function(){
+        let input = this.textContent;
+
+        if (/\d/.test(input)) {
+            if (didEquals) {
+                setDisplay(input);
+                didEquals = false;
+            } else {
+                addToDisplay(input);
+            }
+        } else if (input == 'AC') {
+            clear();
+        } else if (input == '=') {
+            if (!numberStored || !operatorStored) {
+                alert('Error: no operation entered. Clearing data');
+                clear();
+            } else {
+                numberStored = operate(Number(numberStored), operatorStored, Number(display.textContent));
+                operatorStored = '';
+                setDisplay(numberStored);
+                numberStored = '';
+                didEquals = true;
+            }
+        } else {
+            storeCalc(input);
+        }
+    })
+});
