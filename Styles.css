@@ -15,3 +15,16 @@ body {
 
 /* Calculator containers */
 
+.calculator-container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    height: 550px;
+    width: 375px;
+    background-color: black;
+    border: 5px solid DarkSlateGray;
+    padding: 15px;
+}
+
+/* Grid - number display - 1st row */
+
