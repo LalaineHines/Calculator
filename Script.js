@@ -13,4 +13,18 @@ let operatorStored = ''; // To store operator signs
 let newInput = false;
 let didEquals = false;
 
-//
+// Function to assign our calculations to numberStored variable
+function storeCalc (operator) {
+    if (!numberStored) {
+        numberStore = display.textContent;
+    } else {
+        numberStored = operate(Number(numberStored), operatorStored, Number(display.textContent));
+    };
+
+    operatorStored = operator;
+    newInput = true;
+    didEquals = false;
+};
+
+// Calculations - Parent Function
+function
