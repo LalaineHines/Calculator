@@ -60,3 +60,29 @@ function divide (a, b) {
     return a / b;
 };
 
+// Reset function - to update back to blank string and a display with 0
+function clear () {
+    display.textContent = 0;
+    numberStored = '';
+    operatorStored = '';
+};
+
+// Function addDisplay for our buttons.forEach function
+function addDisplay (number) {
+    let displayNum = display.textContent;
+
+    if (newInput) {
+        newInput = false;
+        setDisplay(number);
+    } else if (displayNum == 0) {
+        setDisplay(number);
+    } else {
+        if (displayNum.includes('e')) {
+            displayNum = Number(displayNum);
+        }
+
+        displayNum = displayNum + number;
+        setDisplay(displayNum);
+    }
+};
+
