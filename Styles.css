@@ -48,3 +48,50 @@ body {
 
 /* Grid - number pad - 2nd, 3rd, 4th, 5th row */
 
+.number-pad-container {
+    grid-row: 2 / 7;
+    display: grid;
+    grid-template-columns: repeat(4, 1gr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.pad-button {
+    border-radius: 100px;
+    font-size: 40px;
+    color: #e6e6e6;
+    background-color: #3c4043;
+    cursor: pointer;
+}
+
+.pad-button:active,
+.pad-button:hover {
+    color: white;
+    background-color: #242729;
+    cursor: pointer;
+    transition: all .25%;
+    transition-timing-function: ease-in;
+}
+
+.pad-button-color {
+    border-radius: 100px;
+    font-size: 40px;
+    color: #e6e6e6;
+    background-color: MediumSeaGreen;
+    cursor: pointer;
+}
+
+.pad-button-color:active,
+.pad-button-color:hover {
+    color: white;
+    background-color: #20603d;
+    transition: all .25%;
+    transition-timing-function: ease-in;
+}
+
+#pad-button-equal-sign {
+    grid-column: 4;
+}
+
+/* Grid - credits n clear - 6th last row */
+
