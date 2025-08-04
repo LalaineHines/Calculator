@@ -27,4 +27,19 @@ function storeCalc (operator) {
 };
 
 // Calculations - Parent Function
-function
+function operate (a, operate, b) {
+    if (operator == '+') {
+        return add(a, b);
+    } else if (operator == '-') {
+        return subtract(a, b);
+    } else if (operator == '*') {
+        return multiply(a, b);
+    } else if (operator == '/') {
+        return divide(a, b);
+    } else {
+        return null
+    }
+};
+
+console.log(operate,(10, '/', 2));
+
