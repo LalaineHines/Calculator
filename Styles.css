@@ -95,3 +95,14 @@ body {
 
 /* Grid - credits n clear - 6th last row */
 
+.credits-container {
+    grid-column: 1/4;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+}
+
+.credits-container a {
+    color: white;
+    text-decoration: none;
+}
