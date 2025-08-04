@@ -28,3 +28,23 @@ body {
 
 /* Grid - number display - 1st row */
 
+.number-display-container {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number-on-screen {
+    font-size: 60px;
+    text-align: right;
+    color: white;
+    height: 75px;
+    width: 96%;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Grid - number pad - 2nd, 3rd, 4th, 5th row */
+
